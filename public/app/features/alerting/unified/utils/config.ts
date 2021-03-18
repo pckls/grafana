@@ -8,3 +8,7 @@ export function getAllDataSources(): Array<DataSourceInstanceSettings<DataSource
 export function getDatasourceByName(name: string): DataSourceInstanceSettings<DataSourceJsonData> | undefined {
   return getAllDataSources().find((source) => source.name === name);
 }
+
+export function getPromAndLokiDataSources(): Array<DataSourceInstanceSettings<DataSourceJsonData>> {
+  return getAllDataSources().filter(({ type }) => type === 'prometheus' || type === 'loki');
+}
