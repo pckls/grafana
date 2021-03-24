@@ -221,7 +221,6 @@
     "@types/react-virtualized-auto-sizer": "1.0.0",
     "@types/uuid": "8.3.0",
     "@welldone-software/why-did-you-render": "4.0.6",
-    "history": "4.10.1",
     "abortcontroller-polyfill": "1.4.0",
     "angular": "1.8.2",
     "angular-bindonce": "0.3.1",
@@ -245,6 +244,7 @@
     "eventemitter3": "4.0.0",
     "fast-text-encoding": "^1.0.0",
     "file-saver": "2.0.2",
+    "history": "4.10.1",
     "hoist-non-react-statics": "3.3.2",
     "immutable": "3.8.2",
     "is-hotkey": "0.1.6",
@@ -297,7 +297,8 @@
     "tti-polyfill": "0.2.2",
     "uuid": "8.3.0",
     "visjs-network": "4.25.0",
-    "whatwg-fetch": "3.1.0"
+    "whatwg-fetch": "3.1.0",
+    "yaml": "^1.10.2"
   },
   "resolutions": {
     "caniuse-db": "1.0.30000772",
