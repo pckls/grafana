@@ -1,0 +1,30 @@
+@grafanaRecipient = grafana
+
+// should point to an existing folder
+@namespace1 = alerting
+
+POST http://admin:admin@localhost:3000/ruler/{{grafanaRecipient}}/api/v1/rules/{{namespace1}}
+content-type: application/json
+
+< ./post-rulegroup-42.json
+
+###
+POST http://admin:admin@localhost:3000/ruler/{{grafanaRecipient}}/api/v1/rules/{{namespace1}}
+content-type: application/json
+
+< ./post-rulegroup-101.json
+
+###
+GET http://admin:admin@localhost:3000/ruler/{{grafanaRecipient}}/api/v1/rules/{{namespace1}}/group42
+
+###
+GET http://admin:admin@localhost:3000/ruler/{{grafanaRecipient}}/api/v1/rules/{{namespace1}}
+
+###
+GET http://admin:admin@localhost:3000/ruler/{{grafanaRecipient}}/api/v1/rules
+
+###
+DELETE http://admin:admin@localhost:3000/ruler/{{grafanaRecipient}}/api/v1/rules/{{namespace1}}/group42
+
+###
+DELETE http://admin:admin@localhost:3000/ruler/{{grafanaRecipient}}/api/v1/rules/{{namespace1}}
